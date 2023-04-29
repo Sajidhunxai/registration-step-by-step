@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Confirmation Page</title>
+  <style>
+    body {
+      background-color: #f7f7f7;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .email {
+      font-size: 24px;
+      font-weight: bold;
+      color: #0070c0;
+      margin-bottom: 30px;
+    }
+
+    button {
+      border: none;
+      background-color: #0070c0;
+      color: #fff;
+      font-size: 18px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005191;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <h1> Congratulations!</h1>
+    <p>You've successfully created your profile on Our Site    </p>
+    <p> Please proceed with your account activation. Open the email from us and click on the 'Activate my account' button.   </p>
+
+    <button onclick="window.close();">Check Your Email</button>
+    <button onclick="window.close();">Resend</button>
+      </div>
+  <script>
+    // Get email from query parameter
+    const params = new URLSearchParams(window.location.search);
+    const email = params.get('email');
+    
+    // Update email display
+    const emailEl = document.querySelector('#email');
+    emailEl.textContent = email;
+  </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <!-- Somehow I got an error, so I comment the title, just uncomment to show -->
+    <!-- <title>Multi Step Form | CodingNepal</title> -->
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="heading">
+        <h2>Get Lovely Cuties in Your Area</h2>
+      </div>
+      <br>
+      <div class="main-container">
+      <div class="container">
+        <div class="progress-bar">
+          <div class="step">
+            <p>Age</p>
+            <div class="bullet">
+              <span>1</span>
+            </div>
+            <div class="check fas fa-check"></div>
+          </div>
+          <div class="step">
+            <p>Gender</p>
+            <div class="bullet">
+              <span>2</span>
+            </div>
+            <div class="check fas fa-check"></div>
+          </div>
+          <div class="step">
+            <p>Location</p>
+            <div class="bullet">
+              <span>3</span>
+            </div>
+            <div class="check fas fa-check"></div>
+          </div>
+          <div class="step">
+            <p>Login</p>
+            <div class="bullet">
+              <span>4</span>
+            </div>
+            <div class="check fas fa-check"></div>
+          </div>
+        </div>
+        <div class="form-outer">
+
+          <form action="/email.php" method="post">
+            
+            <div class="page slide-page">
+              <div class="title">Basic Info:</div>
+              <div class="field">
+                <div class="label">My Age
+                  <span class="error" id="error-age"></span>
+                </div>
+                <select id="age" name="age" required>
+                  <option value="">Select your age</option>
+                </select>
+              </div>
+              <div class="field">
+                <button class="firstNext next" id="firstNext">Next</button>
+              </div>
+            </div>
+            <div class="page">
+              <div class="title">I am:</div>
+              <div class="field">
+                <div class="label">Looking For
+                  <span class="error" id="error-gender"></span>
+                </div>
+                <select id="gender" name="gender">
+                  <option value="male">a man looking for a women</option>
+                  <option value="female">a women looking for a men</option>
+                  <option value="other">a man looking for a men</option>
+                  <option value="other">a man looking for a women</option>
+                </select>
+                
+
+              </div>
+
+              <div class="field btns">
+                <button class="prev-1 prev">Previous</button>
+                <button class="next-1 next">Next</button>
+              </div>
+            </div>
+            <div class="page">
+              <div class="title">Location:</div>
+              <div class="field">
+                <div class="label">My Location</div>
+                <input type="text" name="location" id="location" readonly />
+              </div>
+              <div class="field btns">
+                <button class="prev-2 prev">Previous</button>
+                <button class="next-2 next">Next</button>
+              </div>
+            </div>
+            <div class="page">
+              <div class="title">Login Details:</div>
+              <div class="field">
+                <div class="label">Email Address
+                  <span class="error" id="error-email"></span>
+                </div>
+                <input type="email" name="email" required />
+              </div>
+              <div class="field">
+                <div class="label">Password
+                  <span class="error" id="error-password"></span>
+                </div>
+                <input type="password" name="password" required />
+              </div>
+              <div class="field btns">
+                <button class="prev-3 prev">Previous</button>
+                <button type="submit" class="submit">Start Now</button>
+              </div>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+    </div>
+    
+
+    <!-- Somehow I got an error, so I comment the script tag, just uncomment to use -->
+    <script src="./script.js"></script>
+
+  </body>
+</html>
